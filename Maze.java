@@ -8,4 +8,9 @@ class Pos {
     }
 }
 public class Maze {
+    public void DFS(int[][] myMaze) {
+        int[] dx = {0, 1, 0, -1}, dy = {1, 0, -1, 0};
+        ArrayList<Pos> path = new ArrayList<>();
+
+    }
 }
