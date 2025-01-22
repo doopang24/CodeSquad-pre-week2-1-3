@@ -36,7 +36,6 @@ public class Maze {
 
     public static void main(String[] args) {
         Maze maze = new Maze();
-
         int[][] myMaze = {
                 {0, 0, 1, 1, 1, 1, 1, 1},
                 {1, 0, 0, 0, 0, 0, 0, 1},
@@ -47,7 +46,15 @@ public class Maze {
                 {1, 0, 0, 0, 0, 0, 0, 0},
                 {1, 1, 1, 1, 1, 1, 1, 0}
         };
-
+        System.out.println("미로의 시작지점(0, 0) 에서 탈출지점(7, 7)까지 가는 경로를 출력하세요.");
+        for (int i = 0; i < myMaze.length; i++) {
+            for (int j = 0; j < myMaze[0].length; j++) {
+                if (myMaze[i][j] == 0) System.out.print("  ");
+                else System.out.print("* ");
+            }
+            System.out.println();
+        }
+        path.add(new Pos(0, 0));
         maze.DFS(myMaze, 0, 0);
     }
 }
